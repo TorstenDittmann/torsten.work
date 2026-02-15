@@ -16,21 +16,27 @@
 			url: 'https://github.com/TorstenDittmann/svelte-markdoc-preprocess'
 		},
 		{
+			name: 'docia',
+			description:
+				'A static documentation generator that prioritizes readability, search engines, and AI assistants.',
+			url: 'https://github.com/TorstenDittmann/docia'
+		},
+		{
 			name: 'launch.css',
 			description: 'A classless CSS framework for rapid prototyping.',
 			url: 'https://github.com/TorstenDittmann/launch.css'
-		},
-		{
-			name: 'bun-svelte-spa',
-			description: 'A simple Svelte framework for Bun.',
-			url: 'https://github.com/TorstenDittmann/bun-svelte-spa'
 		},
 		{
 			name: 'workspace-utils',
 			description:
 				'CLI tool to orchestrate scripts across monorepo workspaces with parallel execution.',
 			url: 'https://github.com/TorstenDittmann/workspace-utils'
-		}
+		},
+		{
+			name: 'bun-svelte-spa',
+			description: 'A simple Svelte framework for Bun.',
+			url: 'https://github.com/TorstenDittmann/bun-svelte-spa'
+		},
 	];
 
 	const publications = [
