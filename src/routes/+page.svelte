@@ -50,6 +50,12 @@
 
 	const projects = [
 		{
+			name: 'hansi.codes',
+			description: 'AI code review for GitHub that catches real bugs and grades each pull request.',
+			url: 'https://hansi.codes',
+			deprecated: false
+		},
+		{
 			name: 'fictioneer.app',
 			description: 'Distraction-free writing app for novelists with AI-powered assistance.',
 			url: 'https://fictioneer.app',
