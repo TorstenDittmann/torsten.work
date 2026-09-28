@@ -51,7 +51,8 @@
 	const projects = [
 		{
 			name: 'hansi.codes',
-			description: 'AI code review for GitHub that catches real bugs and grades each pull request.',
+			description:
+				'Bring-your-own-key AI code review for GitHub that runs on your own model key.',
 			url: 'https://hansi.codes',
 			deprecated: false
 		},
