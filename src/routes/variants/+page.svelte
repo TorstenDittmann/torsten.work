@@ -1,19 +1,9 @@
 <script lang="ts">
 	const variants = [
-		{
-			slug: 'terminal',
-			name: 'CRT Terminal',
-			note: 'A phosphor-green shell session with scanlines.'
-		},
-		{
-			slug: 'editorial',
-			name: 'Swiss Editorial',
-			note: 'Light, print-magazine grid with huge type.'
-		},
-		{ slug: 'brutalist', name: 'Neo-Brutalist', note: 'Loud colors, thick borders, hard shadows.' },
-		{ slug: 'bento', name: 'Bento Glass', note: 'Frosted cards over a moving aurora.' },
-		{ slug: 'desktop', name: 'Retro Desktop', note: 'A nostalgic OS with draggable windows.' },
-		{ slug: 'blueprint', name: 'Blueprint', note: 'A technical drawing for a Product Architect.' }
+		{ slug: 'index', name: 'Index', note: 'Labels on the left, entries on the right.' },
+		{ slug: 'serif', name: 'Serif', note: 'One reading column; each entry is a sentence.' },
+		{ slug: 'mono', name: 'Mono', note: 'Monospace, aligned like a plain README.' },
+		{ slug: 'split', name: 'Split', note: 'Name pinned left, work listed right.' }
 	];
 </script>
 
