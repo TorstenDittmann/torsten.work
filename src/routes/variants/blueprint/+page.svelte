@@ -289,11 +289,11 @@
 						<span class="lbl">SCALE</span>
 						<span class="tb-val">1:1</span>
 					</div>
-					<div class="tb-cell tb-wide">
+					<div class="tb-cell tb-dept">
 						<span class="lbl">DEPT</span>
 						<span class="tb-val">PRODUCT ARCH.</span>
 					</div>
-					<div class="tb-cell">
+					<div class="tb-cell tb-appr">
 						<span class="lbl">APPROVED</span>
 						<span class="hand tb-sig">T. Dittmann</span>
 					</div>
@@ -927,7 +927,8 @@
 		border-right: 1px solid var(--line);
 	}
 	.tb-title,
-	.tb-wide {
+	.tb-wide,
+	.tb-appr {
 		grid-column: 1 / -1;
 	}
 	.tb-title {
@@ -992,8 +993,12 @@
 		.tblock {
 			grid-template-columns: repeat(4, 1fr);
 		}
-		.tb-wide {
+		.tb-wide,
+		.tb-dept {
 			grid-column: span 2;
+		}
+		.tb-appr {
+			grid-column: auto;
 		}
 
 		/* zone markers */

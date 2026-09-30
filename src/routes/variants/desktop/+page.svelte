@@ -10,10 +10,10 @@
 	const trashed = projects.filter((p) => p.deprecated);
 
 	let wins = $state<Record<WinId, Win>>({
-		projects: { title: 'Projects', open: true, shaded: false, x: 500, y: 36, w: 440, z: 2 },
-		oss: { title: 'Open Source', open: true, shaded: false, x: 150, y: 400, w: 540, z: 3 },
-		writing: { title: 'Writing', open: true, shaded: false, x: 730, y: 440, w: 360, z: 4 },
-		trash: { title: 'Trash', open: true, shaded: false, x: 790, y: 740, w: 330, z: 1 },
+		projects: { title: 'Projects', open: true, shaded: false, x: 520, y: 40, w: 440, z: 2 },
+		oss: { title: 'Open Source', open: true, shaded: false, x: 150, y: 410, w: 540, z: 3 },
+		writing: { title: 'Writing', open: true, shaded: false, x: 740, y: 480, w: 380, z: 4 },
+		trash: { title: 'Trash', open: true, shaded: false, x: 780, y: 690, w: 330, z: 1 },
 		about: { title: 'About Torsten', open: true, shaded: false, x: 36, y: 56, w: 430, z: 5 }
 	});
 	let zTop = $state(5);
@@ -368,6 +368,7 @@
 			{@render win('oss', ossBody, `${openSource.length} items`)}
 			{@render win('writing', writingBody, `${publications.length} document`)}
 			{@render win('trash', trashBody, `${trashed.length} item`)}
+			<p class="hint">Tip: drag windows by their title bar · click icons to reopen</p>
 			{#if !Object.values(wins).some((w) => w.open)}
 				<p class="empty">All windows closed. Click an icon to open one again.</p>
 			{/if}
@@ -504,6 +505,9 @@
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
+	}
+	.hint {
+		display: none;
 	}
 	.empty {
 		color: #fff;
@@ -839,7 +843,7 @@
 	@media (min-width: 768px) {
 		.desk {
 			padding: 0;
-			min-height: max(calc(100vh - 26px), 1000px);
+			min-height: max(calc(100vh - 26px), 940px);
 		}
 		.icons {
 			position: absolute;
@@ -872,6 +876,17 @@
 		}
 		.grow {
 			display: block;
+		}
+		.hint {
+			display: block;
+			position: absolute;
+			left: 16px;
+			bottom: 12px;
+			margin: 0;
+			font-family: 'Pixelify Sans', sans-serif;
+			font-size: 13px;
+			color: #fff;
+			text-shadow: 1px 1px 0 #2d2d6b;
 		}
 		.empty {
 			position: absolute;
