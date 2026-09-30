@@ -43,15 +43,6 @@
 	<span class="reg br" aria-hidden="true"></span>
 {/snippet}
 
-{#snippet sectionHead(num: string, title: string, note: string)}
-	<div class="sec-head">
-		<span class="sec-num">{num}</span>
-		<h2 class="sec-title">{title}</h2>
-		<span class="sec-rule" aria-hidden="true"></span>
-		<span class="hand sec-note">{note}</span>
-	</div>
-{/snippet}
-
 <div class="bp min-h-screen">
 	<div class="sheet">
 		<!-- zone markers -->

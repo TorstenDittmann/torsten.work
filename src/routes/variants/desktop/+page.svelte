@@ -4,7 +4,15 @@
 	import { currentRole, projects, openSource, publications, socials } from '$lib/data';
 
 	type WinId = 'about' | 'projects' | 'oss' | 'writing' | 'trash';
-	type Win = { title: string; open: boolean; shaded: boolean; x: number; y: number; w: number; z: number };
+	type Win = {
+		title: string;
+		open: boolean;
+		shaded: boolean;
+		x: number;
+		y: number;
+		w: number;
+		z: number;
+	};
 
 	const active = projects.filter((p) => !p.deprecated);
 	const trashed = projects.filter((p) => p.deprecated);
@@ -82,7 +90,7 @@
 		document.getElementById(`icon-${id}`)?.focus();
 	}
 
-	let drag: { id: WinId; dx: number; dy: number } | null = null;
+	let drag: { id: WinId; dx: number; dy: number } | null = $state(null);
 
 	function startDrag(e: PointerEvent, id: WinId) {
 		raise(id);
@@ -189,6 +197,7 @@
 			aria-labelledby="title-{id}"
 			tabindex="-1"
 			onpointerdown={() => raise(id)}
+			onfocusin={() => raise(id)}
 		>
 			<!-- svelte-ignore a11y_no_static_element_interactions -->
 			<header
@@ -247,14 +256,19 @@
 			<span class="label">Find me on</span>
 			<ul>
 				{#each socials as s (s.name)}
-					<li><a class="pbtn" href={s.url} target="_blank" rel="noopener noreferrer">{s.name}</a></li>
+					<li>
+						<a class="pbtn" href={s.url} target="_blank" rel="noopener noreferrer">{s.name}</a>
+					</li>
 				{/each}
 			</ul>
 		</div>
 	</div>
 {/snippet}
 
-{#snippet listBody(items: { name: string; description: string; url: string }[], kind: 'doc' | 'folder')}
+{#snippet listBody(
+	items: { name: string; description: string; url: string }[],
+	kind: 'doc' | 'folder'
+)}
 	<div class="colhead" aria-hidden="true">
 		<span>Name</span><span class="hidden sm:inline">Kind</span>
 	</div>
@@ -268,7 +282,8 @@
 					>
 					<p class="li-desc">{item.description}</p>
 				</div>
-				<span class="li-kind hidden sm:inline">{kind === 'doc' ? 'application' : 'repository'}</span>
+				<span class="li-kind hidden sm:inline">{kind === 'doc' ? 'application' : 'repository'}</span
+				>
 			</li>
 		{/each}
 	</ul>
@@ -591,12 +606,19 @@
 		outline: 2px solid var(--sel);
 		outline-offset: 1px;
 	}
-	.inactive .stripes,
-	.inactive .box {
+	.inactive .stripes {
 		visibility: hidden;
 	}
+	.inactive .box {
+		background: var(--plat);
+		border-color: #999;
+		box-shadow: none;
+	}
+	.inactive .box.shade::after {
+		border-color: #999;
+	}
 	.inactive .wtitle {
-		color: #7a7a7a;
+		color: #5f5f5f;
 	}
 	.inactive {
 		box-shadow:
@@ -903,8 +925,7 @@
 				inset -1px -1px 0 var(--lo),
 				3px 3px 0 rgba(0, 0, 0, 0.45);
 		}
-		.inactive .stripes,
-		.inactive .box {
+		.inactive .stripes {
 			visibility: visible;
 		}
 		.inactive .wtitle {

@@ -46,7 +46,11 @@
 
 				<section class="block" style="--i: 1" aria-labelledby="whoami">
 					<p class="prompt-line">
-						<span class="ps1">torsten<span class="host">@work</span><span class="dim">:</span><span class="path">~</span>$</span>
+						<span class="ps1"
+							>torsten<span class="host">@work</span><span class="dim">:</span><span class="path"
+								>~</span
+							>$</span
+						>
 						<span class="cmd" style="--n: 6">whoami</span>
 					</p>
 					<div class="out">
@@ -57,7 +61,11 @@
 
 				<section class="block" style="--i: 2" aria-labelledby="currently">
 					<p class="prompt-line">
-						<span class="ps1">torsten<span class="host">@work</span><span class="dim">:</span><span class="path">~</span>$</span>
+						<span class="ps1"
+							>torsten<span class="host">@work</span><span class="dim">:</span><span class="path"
+								>~</span
+							>$</span
+						>
 						<span class="cmd" style="--n: 17">cat currently.txt</span>
 					</p>
 					<div class="out">
@@ -75,7 +83,11 @@
 
 				<section class="block" style="--i: 3" aria-labelledby="projects">
 					<p class="prompt-line">
-						<span class="ps1">torsten<span class="host">@work</span><span class="dim">:</span><span class="path">~</span>$</span>
+						<span class="ps1"
+							>torsten<span class="host">@work</span><span class="dim">:</span><span class="path"
+								>~</span
+							>$</span
+						>
 						<span class="cmd" style="--n: 17">ls -la ~/projects</span>
 					</p>
 					<div class="out">
@@ -101,7 +113,11 @@
 
 				<section class="block" style="--i: 4" aria-labelledby="oss">
 					<p class="prompt-line">
-						<span class="ps1">torsten<span class="host">@work</span><span class="dim">:</span><span class="path">~</span>$</span>
+						<span class="ps1"
+							>torsten<span class="host">@work</span><span class="dim">:</span><span class="path"
+								>~</span
+							>$</span
+						>
 						<span class="cmd" style="--n: 23">ls -la ~/src/open-source</span>
 					</p>
 					<div class="out">
@@ -124,7 +140,11 @@
 
 				<section class="block" style="--i: 5" aria-labelledby="writing">
 					<p class="prompt-line">
-						<span class="ps1">torsten<span class="host">@work</span><span class="dim">:</span><span class="path">~</span>$</span>
+						<span class="ps1"
+							>torsten<span class="host">@work</span><span class="dim">:</span><span class="path"
+								>~</span
+							>$</span
+						>
 						<span class="cmd" style="--n: 24">git log --oneline writing</span>
 					</p>
 					<div class="out">
@@ -143,7 +163,11 @@
 
 				<section class="block" style="--i: 6" aria-labelledby="socials">
 					<p class="prompt-line">
-						<span class="ps1">torsten<span class="host">@work</span><span class="dim">:</span><span class="path">~</span>$</span>
+						<span class="ps1"
+							>torsten<span class="host">@work</span><span class="dim">:</span><span class="path"
+								>~</span
+							>$</span
+						>
 						<span class="cmd" style="--n: 13">cat ~/.socials</span>
 					</p>
 					<div class="out">
@@ -151,7 +175,9 @@
 						<ul class="socials">
 							{#each socials as social (social.name)}
 								<li>
-									<span class="dim">{social.name.toLowerCase()} -&gt;</span>
+									<span class="dim"
+										>{social.name.toLowerCase()}<span class="arrow"> -&gt;</span></span
+									>
 									<a href={social.url} target="_blank" rel="noreferrer">{host(social.url)}</a>
 								</li>
 							{/each}
@@ -159,8 +185,12 @@
 					</div>
 				</section>
 
-				<p class="block prompt-line final" style="--i: 7">
-					<span class="ps1">torsten<span class="host">@work</span><span class="dim">:</span><span class="path">~</span>$</span>
+				<p class="prompt-line final block" style="--i: 7">
+					<span class="ps1"
+						>torsten<span class="host">@work</span><span class="dim">:</span><span class="path"
+							>~</span
+						>$</span
+					>
 					<span class="cursor" aria-hidden="true"></span>
 				</p>
 			</div>
@@ -186,7 +216,7 @@
 			radial-gradient(ellipse at 50% 100%, #06170b 0%, transparent 70%), var(--bg);
 		color: var(--fg);
 		font-family: 'VT323', ui-monospace, 'SFMono-Regular', Menlo, Consolas, monospace;
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		line-height: 1.3;
 		text-shadow: var(--glow);
 		overflow-x: clip;
@@ -463,12 +493,14 @@
 		display: contents;
 	}
 
-	.host {
+	.host,
+	.arrow {
 		display: none;
 	}
 
 	@media (min-width: 640px) {
-		.host {
+		.host,
+		.arrow {
 			display: inline;
 		}
 	}
