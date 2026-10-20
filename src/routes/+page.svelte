@@ -57,6 +57,20 @@
 			deprecated: false
 		},
 		{
+			name: 'sbx',
+			description:
+				'Self-hosted sandboxes for untrusted code, with one API across Docker, gVisor, Kata, and Firecracker.',
+			url: 'https://sbx.torsten.work',
+			deprecated: false
+		},
+		{
+			name: 'orch',
+			description:
+				'Deploy containers to your own servers with the simplicity of Docker Swarm and the features of Kubernetes.',
+			url: 'https://orch.torsten.work',
+			deprecated: false
+		},
+		{
 			name: 'fictioneer.app',
 			description: 'Distraction-free writing app for novelists with AI-powered assistance.',
 			url: 'https://fictioneer.app',
@@ -84,7 +98,7 @@
 </script>
 
 <svelte:head>
-	<title>Torsten Dittmann - Product Architect</title>
+	<title>Torsten Dittmann</title>
 	<meta
 		name="description"
 		content="Product Architect at Appwrite. Building developer tools and open source."
@@ -122,7 +136,7 @@
 	<header class="mb-20">
 		<p class="mb-3 font-mono text-sm text-neutral-600">~/torstendittmann</p>
 		<h1 class="mb-4 text-3xl font-semibold tracking-tight text-neutral-100">Torsten Dittmann</h1>
-		<p class="mb-6 leading-relaxed text-neutral-400">Product Architect from Germany.</p>
+		<p class="mb-6 leading-relaxed text-neutral-400">Software Engineer.</p>
 		<nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
 			<a href="https://github.com/TorstenDittmann" class="group flex items-center gap-1">
 				GitHub
