@@ -136,7 +136,7 @@
 	<header class="mb-20">
 		<p class="mb-3 font-mono text-sm text-neutral-600">~/torstendittmann</p>
 		<h1 class="mb-4 text-3xl font-semibold tracking-tight text-neutral-100">Torsten Dittmann</h1>
-		<p class="mb-6 leading-relaxed text-neutral-400">Product Architect from Germany.</p>
+		<p class="mb-6 leading-relaxed text-neutral-400">Software Engineer.</p>
 		<nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm">
 			<a href="https://github.com/TorstenDittmann" class="group flex items-center gap-1">
 				GitHub
