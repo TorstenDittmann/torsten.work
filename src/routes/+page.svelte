@@ -98,7 +98,7 @@
 </script>
 
 <svelte:head>
-	<title>Torsten Dittmann - Product Architect</title>
+	<title>Torsten Dittmann</title>
 	<meta
 		name="description"
 		content="Product Architect at Appwrite. Building developer tools and open source."
