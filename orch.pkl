@@ -1,0 +1,15 @@
+amends "https://orch.torsten.work/pkl/v1alpha1/Application.pkl"
+
+// torsten.work, served by orch as a static site. Requires orch v0.1.14 or
+// newer. Build first with `bun run build`; the deploy workflow is
+// .github/workflows/deploy.yml.
+
+name = "torsten-work"
+
+services {
+  ["web"] {
+    // Unknown paths get build/404.html with status 404.
+    static = new Static { dir = "build" }
+    http { domains { "torsten.work" } }
+  }
+}

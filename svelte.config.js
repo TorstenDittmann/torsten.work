@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-static';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -7,7 +7,9 @@ const config = {
 	// for more information about preprocessors
 	preprocess: vitePreprocess(),
 
-	kit: { adapter: adapter() }
+	// Prerendered and served by orch as a static site. Unknown paths get
+	// 404.html, which renders +error.svelte in the browser.
+	kit: { adapter: adapter({ fallback: '404.html' }) }
 };
 
 export default config;
